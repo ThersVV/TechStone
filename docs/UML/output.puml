@@ -1,0 +1,355 @@
+@startuml
+
+
+scale max 4096 width
+
+/' Objects '/
+
+abstract class ImageInsertEvent {
+}
+
+
+class IndexedTextView {
+	+IndexedTextView(std::size_t i, int width, int height, std::shared_ptr<bool> _userInsertionFlag, Glib::RefPtr<Gtk::TextTagTable> tagTable)
+	+GetTagByName(const Glib::ustring& name) : Glib::RefPtr<Gtk::TextTag>
+	+GetFlags() : PageEditFlags
+	+IsRangeFullyTagged(const Gtk::TextIter& startIt, const Gtk::TextIter& endIt, const Glib::RefPtr<Gtk::TextTag>& tag, bool skipSpaces) : bool
+	+GetIndex() : std::size_t
+	+EraseWithoutPaging(const Gtk::TextBuffer::iterator& range_start, const Gtk::TextBuffer::iterator& range_end) : void
+	+MachineErase(const Gtk::TextBuffer::iterator& range_start, const Gtk::TextBuffer::iterator& range_end) : void
+	+MachineInsert(const Gtk::TextBuffer::iterator& pos, const Glib::ustring& text) : void
+	+MachineTag(const Glib::RefPtr<Gtk::TextTag>& tag, const Gtk::TextBuffer::iterator& range_start, const Gtk::TextBuffer::iterator& range_end) : void
+	+MachineUntag(const Glib::RefPtr<Gtk::TextTag>& tag, const Gtk::TextBuffer::iterator& range_start, const Gtk::TextBuffer::iterator& range_end) : void
+	+SetHandlers(std::shared_ptr<IndexedTextView> thisPage, ... slotBTag, ... slotBUntag, ... slotBErase, ... slotAErase, ... slotBInsert, ... slotBKey, ... slotAClick) : void
+	+SetIndex(std::size_t newIndex) : void
+	+SilentInsert(const Gtk::TextBuffer::iterator& pos, const Glib::ustring& text) : void
+	+TagSelection(const Glib::ustring& tagName) : void
+	-tagChangesSpaces(const Glib::RefPtr<Gtk::TextTag>& tag) : bool
+	-on_insert_signal : sigc::connection
+	-userInsertionFlag : std::shared_ptr<bool>
+	-index : std::size_t
+	-flags : PageEditFlags
+}
+
+
+class MainWindow {
+	+MainWindow()
+	+MainWindow(std::string _sourceFilePath, std::string startingText)
+	-horizontalBox : Gtk::Box
+	-verticalBox : Gtk::Box
+	-panelGrid : Gtk::Grid
+	-overlay : Gtk::Overlay
+	-textArea : TextThingy
+	-beforeClose() : bool
+	-on_key_pressed(guint keyval, guint keycode, Gdk::ModifierType state) : bool
+	-DEFAULT_HEIGHT : const int
+	-DEFAULT_WIDTH : const int
+	-SIDEPANEL_HEIGHT_FRACTION : const int
+	-SIDEPANEL_WIDTH_FRACTION : const int
+	-_sourceFilePath : std::string
+	-on_save_file(Glib::RefPtr<Gio::AsyncResult>& result, Glib::RefPtr<Gtk::FileDialog> dialog) : void
+	-save_to(std::string filePath) : void
+	-setKeyHandler() : void
+	-setup_css() : void
+	-setup_grid() : void
+	-setup_overlay() : void
+	-show_popup(const std::string message, PopupType type) : void
+	-show_save_error(const std::string message) : void
+	-show_save_success(const std::string message) : void
+	-trueClose() : void
+}
+
+
+class PageInterface {
+	+PageInterface(TextThingy& parent_, std::string startingText)
+	+TagSelectedText(const std::string& tagName) : void
+	+GetPageCount() : std::size_t
+	+GetPageContents(std::size_t pageIndex) : std::string
+	+GetLastPage() : std::shared_ptr<ScrollingPageWrapper>
+	-defaultTagTable : Glib::RefPtr<Gtk::TextTagTable>
+	-owner : TextThingy&
+	-handleArrowPressLag(guint keyval, shared_ptr<IndexedTextView> pagePtr) : bool
+	-on_key_pressed(guint keyval, guint keycode, Gdk::ModifierType state, shared_ptr<IndexedTextView> pagePtr) : bool
+	-redo() : bool
+	-undo() : bool
+	-undoEvent(std::shared_ptr<UndoNode>) : bool
+	-getActivePageIndex() : int
+	-undoQueue : std::shared_ptr<UndoQueue>
+	-userIsInserting : std::shared_ptr<bool>
+	-eraseFillInText : std::string
+	-pages : std::vector<std::shared_ptr<ScrollingPageWrapper>>
+	-addPage() : void
+	-addPageBuffers() : void
+	-after_erase(iterator range_start, iterator range_end, shared_ptr<IndexedTextView> pagePtr, std::shared_ptr<bool> eraseWithoutPageAlign) : void
+	-before_apply_tag(RefPtr<Gtk::TextTag> tag, iterator start, iterator end, shared_ptr<IndexedTextView> pagePtr, std::shared_ptr<bool> isMachineTag) : void
+	-before_erase(iterator range_start, iterator range_end, shared_ptr<IndexedTextView> pagePtr, std::shared_ptr<bool> isMachineErase, std::shared_ptr<bool> eraseWithoutPageAlign) : void
+	-before_remove_tag(RefPtr<Gtk::TextTag> tag, iterator start, iterator end, shared_ptr<IndexedTextView> pagePtr, std::shared_ptr<bool> isMachineUntag) : void
+	-createDefaultTagTable() : void
+	-fixIndicesFrom(std::size_t index) : void
+	-moveRelevantTextTags(iterator textStartBufferFrom, iterator textStartBufferTo, std::size_t textLength) : void
+	-multipageErase(PageOffset start, PageOffset end) : void
+	-on_clicked(int n_press, double x, double y, shared_ptr<IndexedTextView> pagePtr) : void
+	-on_insert(iterator pos, const Glib::ustring& text, int bytes, shared_ptr<IndexedTextView> pagePtr, std::shared_ptr<bool> isMachineInsert) : void
+	-on_overflow(std::size_t pageIndex) : void
+	-removeLastPage() : void
+	-removePage(std::size_t index) : void
+	-setFillInText(iterator range_start, iterator range_end, shared_ptr<IndexedTextView> pagePtr) : void
+	-undoErase(const std::shared_ptr<EraseEvent> &) : void
+	-undoInsert(const std::shared_ptr<InsertEvent> &) : void
+	-undoTag(const std::shared_ptr<TagEvent> &) : void
+	-undoUntag(const std::shared_ptr<UntagEvent> &) : void
+}
+
+
+class ScrollingPageWrapper {
+	+ScrollingPageWrapper(Glib::RefPtr<IndexedTextView> _page, int width, int height, slot<void ( std::size_t )> _overflowHandler)
+	+page : Glib::RefPtr<IndexedTextView>
+	-overflowHandler: slot<void(std::size_t)>
+	-setHeight : int
+	-setWidth : int
+	-on_scroll() : void
+}
+
+
+class TextThingy {
+	+TextThingy()
+	+TextThingy(std::string startingText)
+	+getEdited() : bool
+	+{static} pageDeviderHeight : const static int
+	+{static} pageHeight : const static int
+	+{static} pageWidth : const static int
+	+pageInterface : std::shared_ptr<PageInterface>
+	+getAllText() : std::string
+	+addPage() : void
+	+onSave() : void
+	+removeLastPage() : void
+	+removePage(std::size_t index) : void
+	+setEdited() : void
+	-pages : Gtk::Box
+	-overlay : Gtk::Fixed
+	-edited : bool
+	-handleFileDrop(const Glib::ValueBase& value, double x, double y) : bool
+	-vScrollToPage(Glib::RefPtr<Gtk::Adjustment> adjustment) : std::size_t
+	-addFixedOverlay() : void
+	-dropHandler() : void
+	-initPages() : void
+	-on_scroll() : void
+	-{static} printFile(gpointer data, gpointer user_data) : void
+	-putImageToPage(int pageNum, double x, double y) : void
+	-setupTextArea() : void
+	-{static} staticTryImportImage(gpointer data, gpointer user_data) : void
+	-tryImportImage(gpointer data, gpointer user_data) : void
+}
+
+
+class TopPanel {
+	+TopPanel(std::shared_ptr<PageInterface> pageInterface_)
+	-buttonBox : Gtk::Box
+	-redButton : Gtk::Button
+	-pageInterface : std::shared_ptr<PageInterface>
+	-addBasicStylingButton(StylingButton button) : void
+	-initButtonBox() : void
+	-initButtons() : void
+}
+
+
+class TopPanel::StylingButton {
+	+StylingButton(std::string stylingTagName_)
+	+GetTagName() : std::string
+	-stylingTagName : std::string
+}
+
+
+abstract class UndoNode {
+	+~UndoNode()
+	+{abstract} getOppositeEvent() : std::unique_ptr<UndoNode>
+}
+
+
+class UndoQueue {
+	+UndoQueue()
+	+UndoQueue(std::size_t historyLength)
+	+backRedoEvent() : std::shared_ptr<UndoNode>
+	+backUndoEvent() : std::shared_ptr<UndoNode>
+	+addEvent(std::shared_ptr<UndoNode>&& node) : void
+	+popRedoEvent() : void
+	+popUndoEvent() : void
+	+redoSize() : std::size_t
+	+undoSize() : std::size_t
+	-undoQueue : std::deque<std::shared_ptr<UndoNode>>
+	-maxLength : std::size_t
+	-redoStack : std::stack<std::shared_ptr<UndoNode>>
+}
+
+
+enum MainWindow::PopupType {
+	Error
+	Success
+}
+
+
+class EraseEvent {
+	+EraseEvent(std::size_t deletionPageIndex_, int deletionOffset_, Glib::RefPtr<Gtk::TextBuffer> text_)
+	+~EraseEvent()
+	+text : Glib::RefPtr<Gtk::TextBuffer>
+	+deletionOffset : int
+	+deletionPageIndex : std::size_t
+	+getOppositeEvent() : std::unique_ptr<UndoNode>
+}
+
+
+class IndexedTextView::PageEditFlags {
+	+PageEditFlags()
+	+PageEditFlags(bool eraseWithoutPageAlign, bool isMachineErase, bool isMachineInsert, bool isMachineTag, bool isMachineUntag)
+	+eraseWithoutPageAlign : std::shared_ptr<bool>
+	+isMachineErase : std::shared_ptr<bool>
+	+isMachineInsert : std::shared_ptr<bool>
+	+isMachineTag : std::shared_ptr<bool>
+	+isMachineUntag : std::shared_ptr<bool>
+}
+
+
+class InsertEvent {
+	+InsertEvent(std::size_t insertionPageIndex_, int insertionOffset_, Glib::RefPtr<Gtk::TextBuffer> text_)
+	+~InsertEvent()
+	+text : Glib::RefPtr<Gtk::TextBuffer>
+	+insertionOffset : int
+	+insertionPageIndex : std::size_t
+	+getOppositeEvent() : std::unique_ptr<UndoNode>
+}
+
+
+class PageInterface::PageOffset {
+	+PageOffset()
+	+PageOffset(std::size_t _pageIndex, std::size_t _offset)
+	+offset : std::size_t
+	+pageIndex : std::size_t
+}
+
+
+class TagEvent {
+	+TagEvent(Glib::RefPtr<Gtk::TextTag> tag_, std::size_t tagPageIndex_, int tagStartOffset_, int tagEndOffset_)
+	+~TagEvent()
+	+tag : Glib::RefPtr<Gtk::TextTag>
+	+tagEndOffset : int
+	+tagStartOffset : int
+	+tagPageIndex : std::size_t
+	+getOppositeEvent() : std::unique_ptr<UndoNode>
+}
+
+
+class TextThingy::Coordinates {
+	+Coordinates()
+	+Coordinates(double _x, double _y)
+	+x : double
+	+y : double
+}
+
+
+class TextThingy::CoordinatesStatic {
+	+CoordinatesStatic(double _x, double _y, TextThingy* self_)
+	+coords : Coordinates
+	+self : TextThingy*
+}
+
+
+class UntagEvent {
+	+UntagEvent(Glib::RefPtr<Gtk::TextTag> tag_, std::size_t tagPageIndex_, int tagStartOffset_, int tagEndOffset_)
+	+~UntagEvent()
+	+tag : Glib::RefPtr<Gtk::TextTag>
+	+tagEndOffset : int
+	+tagStartOffset : int
+	+tagPageIndex : std::size_t
+	+getOppositeEvent() : std::unique_ptr<UndoNode>
+}
+
+
+class Gtk::Window {}
+class Gtk::ScrolledWindow {}
+class Gtk::Frame  {}
+
+
+
+/' Inheritance relationships '/
+
+UndoNode <|-- EraseEvent
+
+
+UndoNode <|-- ImageInsertEvent
+
+
+UndoNode <|-- InsertEvent
+
+
+UndoNode <|-- TagEvent
+
+
+UndoNode <|-- UntagEvent
+
+
+Gtk::Window <|-- MainWindow
+
+Gtk::ScrolledWindow <|-- ScrollingPageWrapper
+
+Gtk::ScrolledWindow <|-- TextThingy
+
+Gtk::Frame <|-- TopPanel 
+
+
+
+/' Aggregation relationships '/
+
+MainWindow *-- TextThingy
+
+
+PageInterface o-- ScrollingPageWrapper
+
+
+PageInterface *-- TextThingy
+
+
+PageInterface o-- UndoQueue
+
+
+ScrollingPageWrapper *-- IndexedTextView
+
+
+TextThingy o-- PageInterface
+
+
+TextThingy::CoordinatesStatic o-- TextThingy
+
+
+TopPanel o-- PageInterface
+
+
+UndoQueue "2" o-- UndoNode
+
+
+
+
+
+
+/' Nested objects '/
+
+IndexedTextView +-- IndexedTextView::PageEditFlags
+
+
+MainWindow +-- MainWindow::PopupType
+
+
+PageInterface +-- PageInterface::PageOffset
+
+
+TextThingy +-- TextThingy::Coordinates
+
+
+TextThingy +-- TextThingy::CoordinatesStatic
+
+
+TopPanel +-- TopPanel::StylingButton
+
+
+
+
+@enduml

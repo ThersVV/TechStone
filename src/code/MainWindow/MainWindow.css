@@ -1,0 +1,16 @@
+/* Shared styles for all popups */
+.popup {
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+}
+
+/* Specific styles */
+.error-popup {
+    background: rgba(100, 0, 0, 0.9);
+}
+
+.success-popup {
+    background: rgba(28, 100, 0, 0.9);
+}

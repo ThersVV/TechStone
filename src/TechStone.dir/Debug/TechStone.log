@@ -1,0 +1,217 @@
+﻿  Building Custom Rule C:/D_Drive/Trojan_horse/C++/zapoctak/novotvo7/project/src/CMakeLists.txt
+  main.cpp
+C:\D_Drive\Trojan_horse\C++\zapoctak\novotvo7\project\src\code\IndexedTextView\IndexedTextView.h(21,1): warning C4250: IndexedTextView: dědí Gtk::Object::Gtk::Object::destroy_notify_ prostřednictvím dominance.
+  (kompilování zdrojového souboru code/main.cpp)
+  C:\vcpkg\installed\x64-windows\include\gtkmm-4.0\gtkmm\object.h(145,8):
+  viz deklarace: Gtk::Object::destroy_notify_
+  
+C:\D_Drive\Trojan_horse\C++\zapoctak\novotvo7\project\src\code\IndexedTextView\IndexedTextView.h(21,1): warning C4250: IndexedTextView: dědí Gtk::Object::Gtk::Object::set_manage prostřednictvím dominance.
+  (kompilování zdrojového souboru code/main.cpp)
+  C:\vcpkg\installed\x64-windows\include\gtkmm-4.0\gtkmm\object.h(126,8):
+  viz deklarace: Gtk::Object::set_manage
+  
+C:\D_Drive\Trojan_horse\C++\zapoctak\novotvo7\project\src\code\ScrollingPageWrapper\ScrollingPageWrapper.h(19,1): warning C4250: ScrollingPageWrapper: dědí Gtk::Object::Gtk::Object::destroy_notify_ prostřednictvím dominance.
+  (kompilování zdrojového souboru code/main.cpp)
+  C:\vcpkg\installed\x64-windows\include\gtkmm-4.0\gtkmm\object.h(145,8):
+  viz deklarace: Gtk::Object::destroy_notify_
+  
+C:\D_Drive\Trojan_horse\C++\zapoctak\novotvo7\project\src\code\ScrollingPageWrapper\ScrollingPageWrapper.h(19,1): warning C4250: ScrollingPageWrapper: dědí Gtk::Object::Gtk::Object::set_manage prostřednictvím dominance.
+  (kompilování zdrojového souboru code/main.cpp)
+  C:\vcpkg\installed\x64-windows\include\gtkmm-4.0\gtkmm\object.h(126,8):
+  viz deklarace: Gtk::Object::set_manage
+  
+C:\D_Drive\Trojan_horse\C++\zapoctak\novotvo7\project\src\code\TextThingy\TextThingy.h(118,1): warning C4250: TextThingy: dědí Gtk::Object::Gtk::Object::destroy_notify_ prostřednictvím dominance.
+  (kompilování zdrojového souboru code/main.cpp)
+  C:\vcpkg\installed\x64-windows\include\gtkmm-4.0\gtkmm\object.h(145,8):
+  viz deklarace: Gtk::Object::destroy_notify_
+  
+C:\D_Drive\Trojan_horse\C++\zapoctak\novotvo7\project\src\code\TextThingy\TextThingy.h(118,1): warning C4250: TextThingy: dědí Gtk::Object::Gtk::Object::set_manage prostřednictvím dominance.
+  (kompilování zdrojového souboru code/main.cpp)
+  C:\vcpkg\installed\x64-windows\include\gtkmm-4.0\gtkmm\object.h(126,8):
+  viz deklarace: Gtk::Object::set_manage
+  
+C:\D_Drive\Trojan_horse\C++\zapoctak\novotvo7\project\src\code\MainWindow\MainWindow.h(44,1): warning C4250: MainWindow: dědí Gtk::Object::Gtk::Object::destroy_notify_ prostřednictvím dominance.
+  (kompilování zdrojového souboru code/main.cpp)
+  C:\vcpkg\installed\x64-windows\include\gtkmm-4.0\gtkmm\object.h(145,8):
+  viz deklarace: Gtk::Object::destroy_notify_
+  
+  MainWindow.cpp
+C:\D_Drive\Trojan_horse\C++\zapoctak\novotvo7\project\src\code\IndexedTextView\IndexedTextView.h(21,1): warning C4250: IndexedTextView: dědí Gtk::Object::Gtk::Object::destroy_notify_ prostřednictvím dominance.
+  (kompilování zdrojového souboru code/MainWindow/MainWindow.cpp)
+  C:\vcpkg\installed\x64-windows\include\gtkmm-4.0\gtkmm\object.h(145,8):
+  viz deklarace: Gtk::Object::destroy_notify_
+  
+C:\D_Drive\Trojan_horse\C++\zapoctak\novotvo7\project\src\code\IndexedTextView\IndexedTextView.h(21,1): warning C4250: IndexedTextView: dědí Gtk::Object::Gtk::Object::set_manage prostřednictvím dominance.
+  (kompilování zdrojového souboru code/MainWindow/MainWindow.cpp)
+  C:\vcpkg\installed\x64-windows\include\gtkmm-4.0\gtkmm\object.h(126,8):
+  viz deklarace: Gtk::Object::set_manage
+  
+C:\D_Drive\Trojan_horse\C++\zapoctak\novotvo7\project\src\code\ScrollingPageWrapper\ScrollingPageWrapper.h(19,1): warning C4250: ScrollingPageWrapper: dědí Gtk::Object::Gtk::Object::destroy_notify_ prostřednictvím dominance.
+  (kompilování zdrojového souboru code/MainWindow/MainWindow.cpp)
+  C:\vcpkg\installed\x64-windows\include\gtkmm-4.0\gtkmm\object.h(145,8):
+  viz deklarace: Gtk::Object::destroy_notify_
+  
+C:\D_Drive\Trojan_horse\C++\zapoctak\novotvo7\project\src\code\ScrollingPageWrapper\ScrollingPageWrapper.h(19,1): warning C4250: ScrollingPageWrapper: dědí Gtk::Object::Gtk::Object::set_manage prostřednictvím dominance.
+  (kompilování zdrojového souboru code/MainWindow/MainWindow.cpp)
+  C:\vcpkg\installed\x64-windows\include\gtkmm-4.0\gtkmm\object.h(126,8):
+  viz deklarace: Gtk::Object::set_manage
+  
+C:\D_Drive\Trojan_horse\C++\zapoctak\novotvo7\project\src\code\TextThingy\TextThingy.h(118,1): warning C4250: TextThingy: dědí Gtk::Object::Gtk::Object::destroy_notify_ prostřednictvím dominance.
+  (kompilování zdrojového souboru code/MainWindow/MainWindow.cpp)
+  C:\vcpkg\installed\x64-windows\include\gtkmm-4.0\gtkmm\object.h(145,8):
+  viz deklarace: Gtk::Object::destroy_notify_
+  
+C:\D_Drive\Trojan_horse\C++\zapoctak\novotvo7\project\src\code\TextThingy\TextThingy.h(118,1): warning C4250: TextThingy: dědí Gtk::Object::Gtk::Object::set_manage prostřednictvím dominance.
+  (kompilování zdrojového souboru code/MainWindow/MainWindow.cpp)
+  C:\vcpkg\installed\x64-windows\include\gtkmm-4.0\gtkmm\object.h(126,8):
+  viz deklarace: Gtk::Object::set_manage
+  
+C:\D_Drive\Trojan_horse\C++\zapoctak\novotvo7\project\src\code\MainWindow\MainWindow.h(44,1): warning C4250: MainWindow: dědí Gtk::Object::Gtk::Object::destroy_notify_ prostřednictvím dominance.
+  (kompilování zdrojového souboru code/MainWindow/MainWindow.cpp)
+  C:\vcpkg\installed\x64-windows\include\gtkmm-4.0\gtkmm\object.h(145,8):
+  viz deklarace: Gtk::Object::destroy_notify_
+  
+  TextThingy.cpp
+C:\D_Drive\Trojan_horse\C++\zapoctak\novotvo7\project\src\code\IndexedTextView\IndexedTextView.h(21,1): warning C4250: IndexedTextView: dědí Gtk::Object::Gtk::Object::destroy_notify_ prostřednictvím dominance.
+  (kompilování zdrojového souboru code/TextThingy/TextThingy.cpp)
+  C:\vcpkg\installed\x64-windows\include\gtkmm-4.0\gtkmm\object.h(145,8):
+  viz deklarace: Gtk::Object::destroy_notify_
+  
+C:\D_Drive\Trojan_horse\C++\zapoctak\novotvo7\project\src\code\IndexedTextView\IndexedTextView.h(21,1): warning C4250: IndexedTextView: dědí Gtk::Object::Gtk::Object::set_manage prostřednictvím dominance.
+  (kompilování zdrojového souboru code/TextThingy/TextThingy.cpp)
+  C:\vcpkg\installed\x64-windows\include\gtkmm-4.0\gtkmm\object.h(126,8):
+  viz deklarace: Gtk::Object::set_manage
+  
+C:\D_Drive\Trojan_horse\C++\zapoctak\novotvo7\project\src\code\ScrollingPageWrapper\ScrollingPageWrapper.h(19,1): warning C4250: ScrollingPageWrapper: dědí Gtk::Object::Gtk::Object::destroy_notify_ prostřednictvím dominance.
+  (kompilování zdrojového souboru code/TextThingy/TextThingy.cpp)
+  C:\vcpkg\installed\x64-windows\include\gtkmm-4.0\gtkmm\object.h(145,8):
+  viz deklarace: Gtk::Object::destroy_notify_
+  
+C:\D_Drive\Trojan_horse\C++\zapoctak\novotvo7\project\src\code\ScrollingPageWrapper\ScrollingPageWrapper.h(19,1): warning C4250: ScrollingPageWrapper: dědí Gtk::Object::Gtk::Object::set_manage prostřednictvím dominance.
+  (kompilování zdrojového souboru code/TextThingy/TextThingy.cpp)
+  C:\vcpkg\installed\x64-windows\include\gtkmm-4.0\gtkmm\object.h(126,8):
+  viz deklarace: Gtk::Object::set_manage
+  
+C:\D_Drive\Trojan_horse\C++\zapoctak\novotvo7\project\src\code\TextThingy\TextThingy.h(118,1): warning C4250: TextThingy: dědí Gtk::Object::Gtk::Object::destroy_notify_ prostřednictvím dominance.
+  (kompilování zdrojového souboru code/TextThingy/TextThingy.cpp)
+  C:\vcpkg\installed\x64-windows\include\gtkmm-4.0\gtkmm\object.h(145,8):
+  viz deklarace: Gtk::Object::destroy_notify_
+  
+C:\D_Drive\Trojan_horse\C++\zapoctak\novotvo7\project\src\code\TextThingy\TextThingy.h(118,1): warning C4250: TextThingy: dědí Gtk::Object::Gtk::Object::set_manage prostřednictvím dominance.
+  (kompilování zdrojového souboru code/TextThingy/TextThingy.cpp)
+  C:\vcpkg\installed\x64-windows\include\gtkmm-4.0\gtkmm\object.h(126,8):
+  viz deklarace: Gtk::Object::set_manage
+  
+C:\D_Drive\Trojan_horse\C++\zapoctak\novotvo7\project\src\code\TextThingy\TextThingy.cpp(49,66): warning C4244: return: double se převádí na size_t; může dojít ke ztrátě dat.
+  PageInterface.cpp
+C:\D_Drive\Trojan_horse\C++\zapoctak\novotvo7\project\src\code\IndexedTextView\IndexedTextView.h(21,1): warning C4250: IndexedTextView: dědí Gtk::Object::Gtk::Object::destroy_notify_ prostřednictvím dominance.
+  (kompilování zdrojového souboru code/TextThingy/PageInterface.cpp)
+  C:\vcpkg\installed\x64-windows\include\gtkmm-4.0\gtkmm\object.h(145,8):
+  viz deklarace: Gtk::Object::destroy_notify_
+  
+C:\D_Drive\Trojan_horse\C++\zapoctak\novotvo7\project\src\code\IndexedTextView\IndexedTextView.h(21,1): warning C4250: IndexedTextView: dědí Gtk::Object::Gtk::Object::set_manage prostřednictvím dominance.
+  (kompilování zdrojového souboru code/TextThingy/PageInterface.cpp)
+  C:\vcpkg\installed\x64-windows\include\gtkmm-4.0\gtkmm\object.h(126,8):
+  viz deklarace: Gtk::Object::set_manage
+  
+C:\D_Drive\Trojan_horse\C++\zapoctak\novotvo7\project\src\code\ScrollingPageWrapper\ScrollingPageWrapper.h(19,1): warning C4250: ScrollingPageWrapper: dědí Gtk::Object::Gtk::Object::destroy_notify_ prostřednictvím dominance.
+  (kompilování zdrojového souboru code/TextThingy/PageInterface.cpp)
+  C:\vcpkg\installed\x64-windows\include\gtkmm-4.0\gtkmm\object.h(145,8):
+  viz deklarace: Gtk::Object::destroy_notify_
+  
+C:\D_Drive\Trojan_horse\C++\zapoctak\novotvo7\project\src\code\ScrollingPageWrapper\ScrollingPageWrapper.h(19,1): warning C4250: ScrollingPageWrapper: dědí Gtk::Object::Gtk::Object::set_manage prostřednictvím dominance.
+  (kompilování zdrojového souboru code/TextThingy/PageInterface.cpp)
+  C:\vcpkg\installed\x64-windows\include\gtkmm-4.0\gtkmm\object.h(126,8):
+  viz deklarace: Gtk::Object::set_manage
+  
+C:\D_Drive\Trojan_horse\C++\zapoctak\novotvo7\project\src\code\TextThingy\TextThingy.h(118,1): warning C4250: TextThingy: dědí Gtk::Object::Gtk::Object::destroy_notify_ prostřednictvím dominance.
+  (kompilování zdrojového souboru code/TextThingy/PageInterface.cpp)
+  C:\vcpkg\installed\x64-windows\include\gtkmm-4.0\gtkmm\object.h(145,8):
+  viz deklarace: Gtk::Object::destroy_notify_
+  
+C:\D_Drive\Trojan_horse\C++\zapoctak\novotvo7\project\src\code\TextThingy\TextThingy.h(118,1): warning C4250: TextThingy: dědí Gtk::Object::Gtk::Object::set_manage prostřednictvím dominance.
+  (kompilování zdrojového souboru code/TextThingy/PageInterface.cpp)
+  C:\vcpkg\installed\x64-windows\include\gtkmm-4.0\gtkmm\object.h(126,8):
+  viz deklarace: Gtk::Object::set_manage
+  
+C:\D_Drive\Trojan_horse\C++\zapoctak\novotvo7\project\src\code\TextThingy\PageInterface.cpp(39,16): warning C4267: inicializování: Převod z: size_t na: int, může dojít ke ztrátě dat.
+C:\D_Drive\Trojan_horse\C++\zapoctak\novotvo7\project\src\code\TextThingy\PageInterface.cpp(258,86): warning C4267: argument: Převod z: size_t na: int, může dojít ke ztrátě dat.
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\xutility(241,76): warning C4267: argument: Převod z: size_t na: int, může dojít ke ztrátě dat.
+  (kompilování zdrojového souboru code/TextThingy/PageInterface.cpp)
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\xutility(241,76):
+  kontext vytváření instancí šablony (první nejstarší) je
+  	C:\D_Drive\Trojan_horse\C++\zapoctak\novotvo7\project\src\code\TextThingy\PageInterface.cpp(76,22):
+  	Zobrazit odkaz na kompilované vytváření instancí funkce šablona std::shared_ptr<IndexedTextView> std::make_shared<IndexedTextView,unsigned __int64,int&,int&,std::shared_ptr<bool>&>(unsigned __int64 &&,int &,int &,std::shared_ptr<bool> &)
+  	C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\memory(2738,46):
+  	Zobrazit odkaz na kompilované vytváření instancí funkce šablona std::_Ref_count_obj2<IndexedTextView>::_Ref_count_obj2<_Ty,int&,int&,std::shared_ptr<bool>&>(_Ty &&,int &,int &,std::shared_ptr<bool> &)
+          with
+          [
+              _Ty=unsigned __int64
+          ]
+  	C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\memory(2062,18):
+  	Zobrazit odkaz na kompilované vytváření instancí funkce šablona void std::_Construct_in_place<_Ty,unsigned __int64,int&,int&,std::shared_ptr<bool>&>(_Ty &,unsigned __int64 &&,int &,int &,std::shared_ptr<bool> &) noexcept(false)
+          with
+          [
+              _Ty=IndexedTextView
+          ]
+  	C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\xutility(251,14):
+  	Zobrazit odkaz na kompilované vytváření instancí funkce šablona _Ty *std::construct_at<_Ty,unsigned __int64,int&,int&,std::shared_ptr<bool>&,0x0>(_Ty *const ,unsigned __int64 &&,int &,int &,std::shared_ptr<bool> &) noexcept(<expr>)
+          with
+          [
+              _Ty=IndexedTextView
+          ]
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\xutility(255,82): warning C4267: argument: Převod z: size_t na: int, může dojít ke ztrátě dat.
+  (kompilování zdrojového souboru code/TextThingy/PageInterface.cpp)
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\xutility(242,90): warning C4267: argument: Převod z: size_t na: int, může dojít ke ztrátě dat.
+  (kompilování zdrojového souboru code/TextThingy/PageInterface.cpp)
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\xutility(242,90):
+  kontext vytváření instancí šablony (první nejstarší) je
+  	C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\memory(2062,18):
+  	Zobrazit odkaz na kompilované vytváření instancí funkce šablona void std::_Construct_in_place<_Ty,unsigned __int64,int&,int&,std::shared_ptr<bool>&>(_Ty &,unsigned __int64 &&,int &,int &,std::shared_ptr<bool> &) noexcept(false)
+          with
+          [
+              _Ty=IndexedTextView
+          ]
+  	C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\include\xutility(251,14):
+  	Zobrazit odkaz na kompilované vytváření instancí funkce šablona _Ty *std::construct_at<_Ty,unsigned __int64,int&,int&,std::shared_ptr<bool>&,0x0>(_Ty *const ,unsigned __int64 &&,int &,int &,std::shared_ptr<bool> &) noexcept(false)
+          with
+          [
+              _Ty=IndexedTextView
+          ]
+  
+  IndexedTextView.cpp
+C:\D_Drive\Trojan_horse\C++\zapoctak\novotvo7\project\src\code\IndexedTextView\IndexedTextView.h(21,1): warning C4250: IndexedTextView: dědí Gtk::Object::Gtk::Object::destroy_notify_ prostřednictvím dominance.
+  (kompilování zdrojového souboru code/IndexedTextView/IndexedTextView.cpp)
+  C:\vcpkg\installed\x64-windows\include\gtkmm-4.0\gtkmm\object.h(145,8):
+  viz deklarace: Gtk::Object::destroy_notify_
+  
+C:\D_Drive\Trojan_horse\C++\zapoctak\novotvo7\project\src\code\IndexedTextView\IndexedTextView.h(21,1): warning C4250: IndexedTextView: dědí Gtk::Object::Gtk::Object::set_manage prostřednictvím dominance.
+  (kompilování zdrojového souboru code/IndexedTextView/IndexedTextView.cpp)
+  C:\vcpkg\installed\x64-windows\include\gtkmm-4.0\gtkmm\object.h(126,8):
+  viz deklarace: Gtk::Object::set_manage
+  
+  ScrollingPageWrapper.cpp
+C:\D_Drive\Trojan_horse\C++\zapoctak\novotvo7\project\src\code\IndexedTextView\IndexedTextView.h(21,1): warning C4250: IndexedTextView: dědí Gtk::Object::Gtk::Object::destroy_notify_ prostřednictvím dominance.
+  (kompilování zdrojového souboru code/ScrollingPageWrapper/ScrollingPageWrapper.cpp)
+  C:\vcpkg\installed\x64-windows\include\gtkmm-4.0\gtkmm\object.h(145,8):
+  viz deklarace: Gtk::Object::destroy_notify_
+  
+C:\D_Drive\Trojan_horse\C++\zapoctak\novotvo7\project\src\code\IndexedTextView\IndexedTextView.h(21,1): warning C4250: IndexedTextView: dědí Gtk::Object::Gtk::Object::set_manage prostřednictvím dominance.
+  (kompilování zdrojového souboru code/ScrollingPageWrapper/ScrollingPageWrapper.cpp)
+  C:\vcpkg\installed\x64-windows\include\gtkmm-4.0\gtkmm\object.h(126,8):
+  viz deklarace: Gtk::Object::set_manage
+  
+C:\D_Drive\Trojan_horse\C++\zapoctak\novotvo7\project\src\code\ScrollingPageWrapper\ScrollingPageWrapper.h(19,1): warning C4250: ScrollingPageWrapper: dědí Gtk::Object::Gtk::Object::destroy_notify_ prostřednictvím dominance.
+  (kompilování zdrojového souboru code/ScrollingPageWrapper/ScrollingPageWrapper.cpp)
+  C:\vcpkg\installed\x64-windows\include\gtkmm-4.0\gtkmm\object.h(145,8):
+  viz deklarace: Gtk::Object::destroy_notify_
+  
+C:\D_Drive\Trojan_horse\C++\zapoctak\novotvo7\project\src\code\ScrollingPageWrapper\ScrollingPageWrapper.h(19,1): warning C4250: ScrollingPageWrapper: dědí Gtk::Object::Gtk::Object::set_manage prostřednictvím dominance.
+  (kompilování zdrojového souboru code/ScrollingPageWrapper/ScrollingPageWrapper.cpp)
+  C:\vcpkg\installed\x64-windows\include\gtkmm-4.0\gtkmm\object.h(126,8):
+  viz deklarace: Gtk::Object::set_manage
+  
+  Generování kódu...
+  TechStone.vcxproj -> C:\D_Drive\Trojan_horse\C++\zapoctak\novotvo7\project\src\Debug\TechStone.exe

@@ -1,0 +1,23 @@
+- When text is highlighted and a big insertion happens, it "disvalidates" iterators, even though everything seems fine. Take care of this ručně (erase, pak insert) (or dont, its just a warning xd)
+- Maybe like every 0.1s I can update one buffer or something like that, just so the scrolling is not THAT weird
+- remage PageInetrface into the box with everything?
+- Move buffers (and their operations on pages) into their own class
+
+**Must have**
+- saving (currently doesnt save formatting)
+
+**Optional**
+
+*Biggest stuff*
+- Either fix paging (not probable) or delete everything that was done only to make paging work
+    - Neither undo nor saving works with multiple pages, as it was implemented after scrapping that idea
+- autocorrect
+
+*Bigger stuff*
+- prace s obrazky
+- odkazy
+
+*Smaller stuff*
+- add to paging that if first word changes, move 2 first words
+- lists
+- customisable shortcuts

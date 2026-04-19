@@ -1,0 +1,10 @@
+^C:\D_DRIVE\TROJAN_HORSE\C++\ZAPOCTAK\NOVOTVO7\PROJECT\SRC\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/D_Drive/Trojan_horse/C++/zapoctak/novotvo7/project/src -BC:/D_Drive/Trojan_horse/C++/zapoctak/novotvo7/project/src --check-stamp-file C:/D_Drive/Trojan_horse/C++/zapoctak/novotvo7/project/src/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
