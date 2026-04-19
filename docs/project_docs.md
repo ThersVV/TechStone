@@ -1,4 +1,5 @@
 # Documentation
+This was a school project gone wrong, also UI is not my passion. Still some ok code to show off i guess. 
 
 ## Compilation guide:
 
